@@ -1,4 +1,3 @@
-
 // layouts
 import { HeaderOnly } from '~/components/Layout';
 
@@ -19,18 +18,18 @@ const publicRoutes = [
         component: Following,
     },
     {
-        path: '/profile',
+        path: '/@:nickname',
         component: Profile,
     },
     {
         path: '/upload',
         component: Upload,
-        layout: HeaderOnly
+        layout: HeaderOnly,
     },
     {
         path: '/search',
         component: Search,
-        layout: null
+        layout: null,
     },
 ];
 const privateRoutes = [];
