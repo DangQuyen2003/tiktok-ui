@@ -1,3 +1,6 @@
+
+import routerConfig from "~/config/router"
+
 // layouts
 import { HeaderOnly } from '~/components/Layout';
 
@@ -10,24 +13,24 @@ import Upload from '~/pages/Upload';
 
 const publicRoutes = [
     {
-        path: '/',
+        path: routerConfig.home,
         component: Home,
     },
     {
-        path: '/following',
+        path: routerConfig.following,
         component: Following,
     },
     {
-        path: '/@:nickname',
+        path: routerConfig.profile,
         component: Profile,
     },
     {
-        path: '/upload',
+        path: routerConfig.upload,
         component: Upload,
         layout: HeaderOnly,
     },
     {
-        path: '/search',
+        path: routerConfig.search,
         component: Search,
         layout: null,
     },

@@ -11,7 +11,7 @@ const cx = classNames.bind(styles);
 
 const defaultFn = () => {};
 
-function Menu({ children, items = [], onChange }) {
+function Menu({ children, items = [],hideOnClick = false ,onChange }) {
     const [history, setHistory] = useState([{ data: items }]);
     const current = history[history.length - 1];
 
@@ -39,6 +39,7 @@ function Menu({ children, items = [], onChange }) {
             // visible
             delay={[10, 500]}
             offset={[12, 8]}
+            hideOnClick={hideOnClick}
             interactive
             placement="bottom-end"
             render={(attrs) => (
@@ -52,7 +53,7 @@ function Menu({ children, items = [], onChange }) {
                                 }}
                             />
                         )}
-                        {renderItem()}
+                        <div className={cx("menu-body")}>{renderItem()}</div>
                     </PopperWrapper>
                 </div>
             )}
