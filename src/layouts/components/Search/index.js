@@ -3,7 +3,7 @@ import { useEffect, useState, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import AccountItem from '~/components/AccountItem';
 
-import * as searchServices from '~/apiServices/searchServices';
+import * as searchServices from '~/services/searchService';
 import classNames from 'classnames/bind';
 import styles from './Search.module.scss';
 import { Wrapper as PopperWrapper } from '~/components/Popper';

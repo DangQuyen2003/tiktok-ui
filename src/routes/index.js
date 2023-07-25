@@ -1,8 +1,7 @@
-
-import routerConfig from "~/config/router"
+import config from '~/config';
 
 // layouts
-import { HeaderOnly } from '~/components/Layout';
+import { HeaderOnly } from '~/layouts';
 
 // pages
 import Following from '~/pages/Following';
@@ -13,24 +12,24 @@ import Upload from '~/pages/Upload';
 
 const publicRoutes = [
     {
-        path: routerConfig.home,
+        path: config.routes.home,
         component: Home,
     },
     {
-        path: routerConfig.following,
+        path: config.routes.following,
         component: Following,
     },
     {
-        path: routerConfig.profile,
+        path: config.routes.profile,
         component: Profile,
     },
     {
-        path: routerConfig.upload,
+        path: config.routes.upload,
         component: Upload,
         layout: HeaderOnly,
     },
     {
-        path: routerConfig.search,
+        path: config.routes.search,
         component: Search,
         layout: null,
     },
