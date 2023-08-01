@@ -9,6 +9,8 @@ import Home from '~/pages/Home';
 import Profile from '~/pages/Profile';
 import Search from '~/pages/Search';
 import Upload from '~/pages/Upload';
+import Explore from '~/pages/Explore';
+import Live from '~/pages/Live';
 
 const publicRoutes = [
     {
@@ -32,6 +34,16 @@ const publicRoutes = [
         path: config.routes.search,
         component: Search,
         layout: null,
+    },
+    {
+        path: config.routes.explore,
+        component: Explore,
+        
+    },
+    {
+        path: config.routes.live,
+        component: Live,
+        
     },
 ];
 const privateRoutes = [];
